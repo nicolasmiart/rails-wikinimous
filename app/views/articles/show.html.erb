@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center">
+  <h1><%= @article.title %></h1>
+  <div class="d-flex align-items-center ms-auto">
+    <%= link_to '<i class="fa-solid fa-pencil"></i>'.html_safe, edit_article_path(@article), class:"me-2" %>
+    <%= link_to '<i class="fa-solid fa-trash-can text-danger"></i>'.html_safe,
+      article_path(@article),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  </div>
+</div>
+<hr class="mb-4 mt-0">
+<p><%= @article.content %></p>
+<hr class="my-4">
+<%= link_to '<i class="fa-solid fa-arrow-rotate-left"></i> Back'.html_safe, articles_path, class: 'text-decoration-none' %>

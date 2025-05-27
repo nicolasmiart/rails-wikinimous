@@ -1,0 +1,10 @@
+<h1 class="mb-3">Edit article</h1>
+<%= form_with model: @article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control mb-3" %>
+  <%= f.label :content %>
+  <%= f.text_area :content, class: "form-control mb-3", rows: 4  %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+<hr class="my-4">
+<%= link_to '<i class="fa-solid fa-arrow-rotate-left"></i> Back'.html_safe, article_path(@article), class: 'text-decoration-none' %>
