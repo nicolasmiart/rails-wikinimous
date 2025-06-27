@@ -1,3 +1,4 @@
+<% content_for :title, "Article title" %>
 <div class="d-flex align-items-center">
   <h1><%= @article.title %></h1>
   <div class="d-flex align-items-center ms-auto">
@@ -10,5 +11,3 @@
 </div>
 <hr class="mb-4 mt-0">
 <p><%= @article.content %></p>
-<hr class="my-4">
-<%= link_to '<i class="fa-solid fa-arrow-rotate-left"></i> Back'.html_safe, articles_path, class: 'text-decoration-none' %>

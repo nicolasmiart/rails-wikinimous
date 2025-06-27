@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
   resources :articles
   root to: "articles#index"
+
+  # Hotwire Native!
+  resource :configuration, only: :show
 end
